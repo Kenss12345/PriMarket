@@ -634,7 +634,7 @@ export class AppComponent implements OnInit {
 		            }
 		        });
 		    }
-
+			//revisar códigp
 		    /*function stickySidebar() {
 		        var sticky = $('.ps-product--sticky'),
 		            stickySidebar, checkPoint = 992,
