@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Path } from '../../config';
 
 @Component({
   selector: 'app-header-promotion',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './header-promotion.component.html',
   styleUrl: './header-promotion.component.css'
 })
-export class HeaderPromotionComponent {
+export class HeaderPromotionComponent implements OnInit {
+
+  path:String = Path.url;
+
+  constructor() {}
+
+  ngOnInit(): void{
+  }
 
 }

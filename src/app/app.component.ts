@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderPromotionComponent } from "./modules/header-promotion/header-promotion.component";
-import { HeaderComponent } from "./modules/header/header.component";
-import { NewletterComponent } from "./modules/newletter/newletter.component";
 import { FooterComponent } from "./modules/footer/footer.component";
+import { NewletterComponent } from "./modules/newletter/newletter.component";
 import { HeaderMobileComponent } from "./modules/header-mobile/header-mobile.component";
+import { HeaderComponent } from "./modules/header/header.component";
+import { HeaderPromotionComponent } from "./modules/header-promotion/header-promotion.component";
 
 declare var jQuery:any;
 declare var $:any;
@@ -15,7 +14,7 @@ declare var $:any;
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, HeaderPromotionComponent, HeaderComponent, NewletterComponent, FooterComponent, HeaderMobileComponent]
+    imports: [FooterComponent, NewletterComponent, HeaderMobileComponent, HeaderComponent, HeaderPromotionComponent]
 })
 export class AppComponent implements OnInit {
 
