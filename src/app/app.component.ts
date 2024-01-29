@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderPromotionComponent } from "./modules/header-promotion/header-promotion.component";
+import { HeaderComponent } from "./modules/header/header.component";
+import { NewletterComponent } from "./modules/newletter/newletter.component";
+import { FooterComponent } from "./modules/footer/footer.component";
+import { HeaderMobileComponent } from "./modules/header-mobile/header-mobile.component";
 
 declare var jQuery:any;
 declare var $:any;
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, HeaderPromotionComponent, HeaderComponent, NewletterComponent, FooterComponent, HeaderMobileComponent]
 })
 export class AppComponent implements OnInit {
 
@@ -634,7 +639,7 @@ export class AppComponent implements OnInit {
 		            }
 		        });
 		    }
-			//revisar códigp
+			//revisar códigps
 		    /*function stickySidebar() {
 		        var sticky = $('.ps-product--sticky'),
 		            stickySidebar, checkPoint = 992,

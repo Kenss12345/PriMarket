@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderMobileComponent } from './header-mobile.component';
 
@@ -6,14 +6,12 @@ describe('HeaderMobileComponent', () => {
   let component: HeaderMobileComponent;
   let fixture: ComponentFixture<HeaderMobileComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HeaderMobileComponent ]
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HeaderMobileComponent]
     })
     .compileComponents();
-  }));
-
-  beforeEach(() => {
+    
     fixture = TestBed.createComponent(HeaderMobileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

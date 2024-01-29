@@ -1,59 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Path } from '../../config';
-import { ProductsService } from '../../services/products.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header-promotion',
+  standalone: true,
+  imports: [],
   templateUrl: './header-promotion.component.html',
-  styleUrls: ['./header-promotion.component.css']
+  styleUrl: './header-promotion.component.css'
 })
-export class HeaderPromotionComponent implements OnInit {
-
-	path:String = Path.url;	
-	top_banner:Object = null;
-	preload:Boolean = false;
-
-	constructor(private productsService: ProductsService ) { }
-
-	ngOnInit(): void {
-
-		this.preload = true;
-
-		this.productsService.getData()
-		.subscribe(resp =>{
-			
-			// console.log("resp", resp[Object.keys(resp)[1]]);
-
-			/*=============================================
-			Tomar la longitud del objeto
-			=============================================*/
-
-			let i;
-			let size = 0;
-
-			for(i in resp){
-
-				size++			
-
-			}
-
-			/*=============================================
-			Generar un número aleatorio 
-			=============================================*/
-
-			let index = Math.floor(Math.random()*size);
-
-			/*=============================================
-			Devolvemos a la vista un banner aleatorio
-			=============================================*/
-
-			this.top_banner = JSON.parse(resp[Object.keys(resp)[index]].top_banner);
-			
-			this.preload = false;
-		
-
-		})
-
-	}
+export class HeaderPromotionComponent {
 
 }

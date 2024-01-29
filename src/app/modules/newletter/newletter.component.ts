@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-newletter',
+  standalone: true,
+  imports: [],
   templateUrl: './newletter.component.html',
-  styleUrls: ['./newletter.component.css']
+  styleUrl: './newletter.component.css'
 })
-export class NewletterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class NewletterComponent {
 
 }
