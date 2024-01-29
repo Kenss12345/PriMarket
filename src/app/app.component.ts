@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterComponent } from "./modules/footer/footer.component";
-import { NewletterComponent } from "./modules/newletter/newletter.component";
-import { HeaderMobileComponent } from "./modules/header-mobile/header-mobile.component";
-import { HeaderComponent } from "./modules/header/header.component";
-import { HeaderPromotionComponent } from "./modules/header-promotion/header-promotion.component";
 
 declare var jQuery:any;
 declare var $:any;
 
-
 @Component({
     selector: 'app-root',
-    standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [FooterComponent, NewletterComponent, HeaderMobileComponent, HeaderComponent, HeaderPromotionComponent]
 })
+
 export class AppComponent implements OnInit {
+	
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 
 	ngOnInit(){
 

@@ -13,7 +13,7 @@ import { NewletterComponent } from './modules/newletter/newletter.component';
 import { FooterComponent } from './modules/footer/footer.component';
 
 
-/*@NgModule({
+@NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -30,4 +30,4 @@ import { FooterComponent } from './modules/footer/footer.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }*/
+export class AppModule { }
